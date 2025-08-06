@@ -10,7 +10,7 @@ SRC_URI = " \
     file://iotisitic_cam.cpp \
 "
 
-DEPENDS = "libstdc++"
+DEPENDS = ""
 
 S = "${WORKDIR}"
 

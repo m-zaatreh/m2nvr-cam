@@ -10,7 +10,7 @@ SRC_URI = " \
     file://iotisitic_cam.cpp \
 "
 
-DEPENDS = ""
+DEPENDS = "libstdc++"
 
 S = "${WORKDIR}"
 
@@ -19,11 +19,11 @@ do_compile() {
     ${CXX} ${CXXFLAGS} -I${S} \
     ${S}/iotisitic_cam.cpp \
     ${S}/main.cpp \
-    -o iotistic-cam \
+    -o m2nvr-cam \
     ${LDFLAGS} -lpthread
 }
 
 do_install() {
     install -d ${D}${bindir}
-    install -m 0755 ${S}/iotistic-cam ${D}${bindir}
+    install -m 0755 ${S}/m2nvr-cam ${D}${bindir}
 }

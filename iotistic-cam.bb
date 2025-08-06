@@ -14,8 +14,7 @@ DEPENDS = "hiredis cjson ffmpeg"
 do_compile() {
     ${CC} ${CFLAGS} -I${S} \
     ${S}/main.c \
-    -o m2nvr-cam \
-    -lhiredis -lavformat -lavcodec -lavutil -lswresample -lswscale -lavdevice -lavfilter -lm -lrt
+    -o m2nvr-cam -lhiredis -lavformat -lavcodec -lavutil -lswresample -lswscale -lavdevice -lavfilter -lm -lrt
 }
 
 do_install() {
